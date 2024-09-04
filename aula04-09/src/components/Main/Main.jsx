@@ -1,10 +1,13 @@
 import './Main.css';
 
-function Main(children){
+function Main(children) {
   return (
-    <main className="main">
-      {children}
-    </main>
+    <div>
+      <main className="main">
+      {children ? children : <p>Nenhum conteúdo encontrado</p>}
+      </main>
+    </div>
+
   );
 };
 
