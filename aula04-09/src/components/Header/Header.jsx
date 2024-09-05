@@ -1,10 +1,12 @@
 import './Header.css';
 
-function Header () {
+function Header() {
   return (
-    <header className="header">
-      <h1>Minha Aplicação</h1>
-    </header>
+    <div>
+      <header className="header">
+        <h1>Minha Aplicação</h1>
+      </header>
+    </div>
   );
 };
 
