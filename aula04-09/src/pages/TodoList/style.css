@@ -1,0 +1,119 @@
+/* Paleta de cores */
+:root {
+    --background-color: #f0f4f8;
+    --container-color: #ffffff;
+    --primary-color: #1e81b0;
+    --secondary-color: #e28743;
+    --text-color: #444;
+    --text-completed: #a8a8a8;
+    --remove-color: #e74c3c;
+    --remove-hover-color: #c0392b;
+    --completed-background: #e8f5e9;
+  }
+  
+  /* Container principal da ToDo List */
+  .todo-container {
+    width: 100%;
+    max-width: 500px;
+    padding: 20px;
+    background-color: var(--container-color);
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Título */
+  .title {
+    text-align: center;
+    color: var(--primary-color);
+  }
+  
+  /* Área de entrada e botão */
+  .input-area {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  
+  /* Estilo do input */
+  .task-input {
+    width: 70%;
+    padding: 10px;
+    border: 1px solid var(--primary-color);
+    border-radius: 4px;
+    font-size: 16px;
+    outline: none;
+  }
+  
+  /* Estilo do botão adicionar */
+  .add-button {
+    padding: 10px 15px;
+    background-color: var(--secondary-color);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .add-button:hover {
+    background-color: #cf6c29;
+  }
+  
+  /* Lista de tarefas */
+  .task-list {
+    margin-top: 20px;
+  }
+  
+  /* Cada item de tarefa */
+  .task-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: var(--container-color);
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .task-item:hover {
+    background-color: var(--primary-color);
+    color: white;
+  }
+  
+  /* Tarefa concluída */
+  .task-item.completed {
+    background-color: var(--completed-background);
+  }
+  
+  .task-item.completed .task-text {
+    text-decoration: line-through;
+    color: var(--text-completed);
+  }
+  
+  /* Texto da tarefa */
+  .task-text {
+    color: var(--text-color);
+  }
+  
+  /* Botão de remover */
+  .remove-button {
+    background-color: var(--remove-color);
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .remove-button:hover {
+    background-color: var(--remove-hover-color);
+  }
+  
+  /* Remover botão não deve ser clicável quando dentro de uma tarefa */
+  .remove-button {
+    pointer-events: all;
+  }
+  
